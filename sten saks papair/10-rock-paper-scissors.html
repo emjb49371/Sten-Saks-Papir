@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <!-- Link til den eksterne CSS-fil -->
+    <link rel="stylesheet" href="styles/10-rock-paper-scissors.css"> 
+  </head>
+
+  <body>
+    <!-- Overskrift med spillets navn -->
+    <p class="title">Welcome to: Rock Paper Scissors</p>
+
+    <!-- Knap til at vælge 'rock' som spillerens træk -->
+    <button onclick="playGame('rock')" class="move-button">
+      <img src="images/rock-emoji.png" class="move-icon">
+    </button>
+
+    <!-- Knap til at vælge 'paper' som spillerens træk -->
+    <button onclick="playGame('paper');" class="move-button">
+      <img src="images/paper-emoji.png" class="move-icon">
+    </button>
+    
+    <!-- Knap til at vælge 'scissors' som spillerens træk -->
+    <button onclick="playGame('scissors');" class="move-button">
+      <img src="images/scissors-emoji.png" class="move-icon">
+    </button>
+
+    <!-- Element til at vise resultatet af spillet -->
+    <p class="js-result result"></p>
+
+    <!-- Element til at vise bevægelserne i spillet -->
+    <p class="js-moves"></p>
+
+    <!-- Element til at vise spillerens score i spillet -->
+    <p class="js-score score"></p>
+
+    <!-- Knap til at nulstille spillerens score -->
+    <button onclick="score.wins = 0; score.losses = 0; score.ties = 0; localStorage.removeItem('score'); updateScoreElement();" class="reset-score-button">
+      Reset Score
+    </button>
+
+    <!-- Link til den eksterne JavaScript-fil -->
+    <script src="/scripts/10-rock-paper-scissors.js"></script>
+  </body>
+</html>
